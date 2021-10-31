@@ -1,0 +1,34 @@
+<header>
+    <div class="name" href="/">Jaipal</div>
+    <nav>
+        <ul class="navlinks">
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/signin">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="form-container">
+        <div class="form-title">Sign in</div>
+        <form action="/table" method="post" class="form">
+
+            <label for="femail">email</label><br />
+            <input type="text" name="femail" pattern="[^ @]*@[^ @]*" required
+                oninvalid="setCustomValidity('Please enter valid Email.')"
+                onchange="try{setCustomValidity('')}catch(e){}" /><br />
+
+            <label for="fpassword">password</label><br />
+            <input type="password" name="fpassword" required /><br />
+
+            <div id="form-button">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">made by <b>jaipaljadeja</b></div>
+    </div>
+</footer>

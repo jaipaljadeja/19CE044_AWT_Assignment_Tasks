@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      h2 {
+        text-align: center;
+        padding: 40px 0;
+        background: #ff5252;
+        margin: 20px 0;
+        color: white;
+        font-weight: bold;
+      }
+
+      .btn-primary {
+        background-color: rgb(105, 88, 255);
+        border-color: rgb(105, 88, 255);
+      }
+
+      .btn-primary:hover {
+        background-color: rgb(255, 88, 88);
+        border-color: rgb(255, 88, 88);
+      }
+
+      .add-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2><%= title %></h2>
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Department Name</th>
+            <th>Institute Name</th>
+            <th>University Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(function(course){ %>
+          <tr>
+            <td><%= course.cid %></td>
+            <td><%= course.cname %></td>
+            <td><%= course.dname %></td>
+            <td><%= course.iname %></td>
+            <td><%= course.uname %></td>
+            <td>
+              <a href="edit/<%= course.id %>" class="btn btn-sm btn-primary"
+                >Edit</a
+              >
+              <a href="delete/<%= course.id %>" class="btn btn-sm btn-danger"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <div class="add-btn">
+        <a href="/add" class="btn btn-sm btn-primary">Add Course</a><br /><br />
+      </div>
+    </div>
+  </body>
+</html>

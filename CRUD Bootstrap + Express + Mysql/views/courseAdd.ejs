@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      h2 {
+        text-align: center;
+        padding: 40px 0;
+        background: #ff5252;
+        margin: 20px 0;
+        color: white;
+        font-weight: bold;
+      }
+      h3 {
+        text-align: center;
+        padding: 20px 0;
+        font-weight: bold;
+      }
+      .btn-primary {
+        font-weight: bold;
+        padding: 10px 20px;
+        background-color: rgb(105, 88, 255);
+        border-color: rgb(105, 88, 255);
+        border-radius: 5px;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .btn-primary:hover {
+        background-color: rgb(255, 88, 88);
+        border-color: rgb(255, 88, 88);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2><%= title %></h2>
+      <h3>Add Course</h3>
+      <form action="/save" method="post">
+        <div class="form-group">
+          <label for="cid">Course id:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cid"
+            placeholder="Enter Course id"
+            name="cid"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cname">Course name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cname"
+            placeholder="Enter Course name"
+            name="cname"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="dname">Department name:</label>
+          <br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="dname"
+              id="CE"
+              value="CE"
+              checked
+            />
+            <label class="form-check-label" for="CE"> CE </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="dname"
+              id="CS"
+              value="CS"
+            />
+            <label class="form-check-label" for="CS"> CS </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="dname"
+              id="CL"
+              value="CL"
+            />
+            <label class="form-check-label" for="CL"> CL </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="dname"
+              id="EC"
+              value="EC"
+            />
+            <label class="form-check-label" for="EC"> EC </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="dname"
+              id="EE"
+              value="EE"
+            />
+            <label class="form-check-label" for="EE"> EE </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="dname"
+              id="IT"
+              value="IT"
+            />
+            <label class="form-check-label" for="IT"> IT </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="dname"
+              id="ME"
+              value="ME"
+            />
+            <label class="form-check-label" for="ME"> ME </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="iname">Institute name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="iname"
+            placeholder="Enter Institute name"
+            name="iname"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="uname">University name:</label>
+          <select class="form-control" id="uname" name="uname" required>
+            <option>Charusat</option>
+            <option>DAIICT</option>
+            <option>Nirma</option>
+            <option>DDU</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
